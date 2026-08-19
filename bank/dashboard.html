@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>BANK | User Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .dashboard-container {
+            width: 900px;
+            background: #fff;
+            border-radius: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 28px;
+        }
+
+        .logout-btn {
+            background: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: #c0392b;
+        }
+
+        .profile-section {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 30px;
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .profile-icon {
+            font-size: 60px;
+            color: #10b981;
+            background: #e6f4ea;
+            padding: 20px;
+            border-radius: 50%;
+        }
+
+        .profile-info h3 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .profile-info p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .info-card {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #10b981;
+        }
+
+        .info-card h4 {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .info-card p {
+            color: #333;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- رأس الصفحة -->
+        <div class="header">
+            <h1>Account Dashboard</h1>
+            <a href="index.html" class="logout-btn">Log Out</a>
+        </div>
+
+        <!-- معلومات المستخدم الشخصية -->
+        <div class="profile-section">
+            <div class="profile-icon">
+                <i class='bx bxs-user-circle'></i>
+            </div>
+            <div class="profile-info">
+                <h3 id="username-display">John Doe</h3>
+                <p id="email-display">johndoe@example.com</p>
+            </div>
+        </div>
+
+        <!-- بطاقات معلومات الحساب البنكي -->
+        <div class="cards-grid">
+            <div class="info-card">
+                <h4>Total Balance</h4>
+                <p>$24,500.00</p>
+            </div>
+            <div class="info-card">
+                <h4>Account Number</h4>
+                <p>**** **** **** 8932</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
